@@ -2,7 +2,6 @@
   <% if course.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
-
       <ul>
         <% course.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,18 +9,12 @@
       </ul>
     </div>
   <% end %>
-
   <div>
-    <%= form.label :title, style: "display: block" %>
+    <p><strong>Title</strong></p>
     <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <p><strong>Description</strong></p>
+    <%= form.text_area :description, :class=>"outline-success" %>
+      <hr size="1px" color="green" />
+    <%= form.submit 'update', :class=>"btn btn-success" %>
   </div>
 <% end %>

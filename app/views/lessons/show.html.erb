@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @lesson %>
 
 <div>
   <%= link_to "Edit this lesson", edit_course_lesson_path(@course, @lesson) %> |
   <%= link_to "Back to lessons", course_lessons_path(@course) %>
 
-  <%# <%= button_to "Destroy this lesson", @lesson, method: :delete %> %>
+  <%# <%= button_to "Destroy this lesson", @lesson(lesson_id), method: :delete %>
 </div>

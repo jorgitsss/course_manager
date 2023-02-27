@@ -1,0 +1,13 @@
+<h1>Questions</h1>
+<%= link_to "New question", new_question_path, class:"btn btn-success" %>
+<hr size="8px" color="green" />
+<div id="questions">
+  <% @questions.each do |question| %>
+    <%= render question %>
+    <p>
+      <%= link_to "Show this question", question %>
+    </p>
+  <% end %>
+</div>
+
+

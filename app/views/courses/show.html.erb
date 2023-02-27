@@ -1,10 +1,13 @@
+<div class="alert alert-light" role="alert">
 <p style="color: green"><%= notice %></p>
+</div>
+<h1>Show Course</h1>
+  <%= button_to "Destroy this course", @course, method: :delete, class:"btn btn-outline-danger" %>
+  <hr size="8px" color="green" />
 
 <%= render @course %>
-
 <div>
-  <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
-
-  <%= button_to "Destroy this course", @course, method: :delete %>
+  <%= link_to "Edit this course", edit_course_path(@course), class:"btn btn-outline-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %> |
+  <%= link_to "Back to courses", courses_path, class:"btn btn-outline-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+<hr size="8px" color="green" />
 </div>

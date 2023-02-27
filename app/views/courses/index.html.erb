@@ -1,16 +1,13 @@
-<p style="color: green"><%= notice %></p>
 <h1>Courses</h1>
-<%= link_to "New course", new_course_path %>
-<hr>
+<%= link_to "New course", new_course_path, class:"btn btn-success" %>
+  <hr size="8px" color="green" />
 <div id="courses">
   <% @courses.each do |course| %>
     <%= render course %>
     <p>
-      <%= link_to "Show this course", course %> / 
-      <%= link_to "Show all lessons of this course", [course] %>
+      <%= link_to "Show this course", course, class:"btn btn-outline-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %> |
+      <%= link_to "Show all lessons of this course", course_lessons_path(course), class:"btn btn-outline-success", style:"--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
     </p>
-    <hr>
+  <hr size="8px" color="green" />
   <% end %>
 </div>
-
-
