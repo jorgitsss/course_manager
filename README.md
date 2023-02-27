@@ -1,9 +1,8 @@
-# course_manager
-Proyect on Ruby on Rails -- Course Manager
- What is REST (Representational state Transfer)
+# Proyect on Ruby on Rails -- Course Manager 
+## What is REST (Representational state Transfer) ?
 
 * It is a software architecture form managing networked applications.
-* 
+ 
 HEAD
 CONNECT
 OPTIONS
@@ -15,11 +14,10 @@ PUT	  modificar actualizacion dato existente
 PATCH   modificar actualizacion parcial
 DELETE  eliminar dato
 
-_________________________________________________________________
+***
+simple 7 Controller on Ruby on Rails 
 
-Controlador sencillo en rails, con 7 acciones
-Ventajas por trabajo en equipo por convenciones 
-
+```rails
 class EntryController < AuthenticatedController
 
 def index # traer informacion
@@ -44,17 +42,20 @@ def destroy  # elimina elemento simple
 end
 
 end
+```
 _________________________________________________________________
+<dl>
+  <dt>App requirements</dt>
+  <dd>Build a simple app on ruby on rails to manage courses, lessons and questions.</dd>
+  <dd>Courses will have 1 or more lessons, lessons will have 1 or more questions.</dd>
+  <dd>We will have students and teachers, all teachers can create questions in lessons.</dd>
+  <dd>We will need a homepage that will show the available courses and from there users (studenst and teachers).</dd>
+  <dd>Will be able to look at the course contents and sign up.</dd>
+</dl>
 
-build a simple app on ruby on rails 
-an aplication to manage courses.
-Courses will have 1 or more lessons, lessons will have 1 or more questions.
-we will have students and teachers.
-teachers can create questions in lessons
-we will need a homepage that will show the available courses and from there users will be able to llok at the course contents and sign up.
-__________________________________________________________________
+<dl>
+## Models
 
-Models
 * Course
 	* Title
 	* Description
@@ -76,19 +77,24 @@ Models
 	* Students
 		* First_name
 		* Last_name
+</dl>
 ___________________________________________________________________
 
- aplicacion se conecta a postgres
-Iniciamos con scaffold MVC
-modelos en singular
-controladores en plural
+## Metas y progreso de este proyecto /  Goals and progrees about this proyect 
 
-1.	Crear una nueva aplicación de Rails con el comando 
+- [x] The app used postgresql db and we used scaffold to made MVC 
+- [x] models on single
+- [x] controller on plural
+
+
+1. - [x] Crear una nueva aplicación de Rails con el comando
+```rails
 rails new course_manager -d=postgresql
-2.	Generar los modelos Course, Lesson, Question, Teacher y Student con los atributos correspondientes.
-3.	Agregar las relaciones entre los modelos Course, Lesson, Question, Teacher y Student.
-4.	Ejecutar las migraciones con el comando rails db:migrate.
-5.	Agregar datos de prueba en la base de datos para verificar que todo funciona correctamente.
-6.	Crear controladores y vistas para mostrar los cursos, las lecciones, las preguntas, los profesores y los estudiantes.
-7.	Agregar una página de inicio que muestre los cursos disponibles y permita a los usuarios ver los contenidos y registrarse.
-8.	Agregar la funcionalidad para que los profesores puedan crear preguntas en las lecciones.
+```
+2. - [x] Generar los modelos Course, Lesson, Question, Teacher y Student con los atributos correspondientes.
+3. - [ ] Agregar las relaciones entre los modelos Course, Lesson, Question, Teacher y Student.
+4. - [ ] Ejecutar las migraciones con el comando rails db:migrate.
+5. - [ ] Agregar datos de prueba en la base de datos para verificar que todo funciona correctamente.
+6. - [ ] Crear controladores y vistas para mostrar los cursos, las lecciones, las preguntas, los profesores y los estudiantes.
+7. - [ ] Agregar una página de inicio que muestre los cursos disponibles y permita a los usuarios ver los contenidos y registrarse.
+8. - [ ] Agregar la funcionalidad para que los profesores puedan crear preguntas en las lecciones.
